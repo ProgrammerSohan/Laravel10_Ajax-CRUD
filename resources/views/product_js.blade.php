@@ -80,6 +80,32 @@
                 });
             })
         //++++++++++end
+            //delete product
+
+
+     $(document).on('click','.delete_product', function(e){//+++++++
+                e.preventDefault();
+                let product_id = $(this).data('id');
+                alert(product_id);
+                if(confirm('Are you sure to delete product ??')){
+
+                        $.ajax({
+                            url:"{{ route('delete.product') }}",
+                            method: 'post',
+                            data:{product_id:product_id},
+                            success:function(res){
+                                if(res.status=='success'){
+                                    $('.table').load(location.href+' .table');
+                                }
+
+
+                            }
+                        });
+                }
+
+
+            })
+// end delete part
 
        
         });
