@@ -24,7 +24,7 @@
 
             <div class="col-md-2">     </div>
                 <div class="col-md-8">
-                    <h2 class="my-5 text-center">Laravel 9 Ajax Crud</h2>
+                    <h2 class="my-5 text-center">Laravel 10 Jquery Ajax Crud</h2>
                     <a href="" class="btn btn-success my-3"  data-bs-toggle="modal" data-bs-target="#addModal">Add Product</a> <!-- addModal -->
                     <div class="table-data">
 
@@ -39,20 +39,22 @@
                               </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <th >1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
+                              @foreach ($products as $key=>$product)
+                                
+                               <tr>
+                                <td >{{ $key+1}}</td>
+                                <td>{{ $product->name}}</td>
+                                <td>{{ $product->price}}</td>
                                 <td>
                 <a href="" class="btn btn-success"> <i class="las la-edit"></i></a>
                  <a href="" class="btn btn-danger"> <i class="las la-times"></i></a>
                                 </td>
                               </tr>
-
+                              @endforeach
 
                             </tbody>
                           </table>
-
+                        {!! $products->links() !!}
 
                     </div>
 
