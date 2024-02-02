@@ -194,6 +194,27 @@
 
             })
 // end delete part
+       
+        //pagination part start //+++++++++++++++
+        $(document).on('click','.pagination a', function(e){
+            e.preventDefault();
+
+
+            let page = $(this).attr('href').split('page=')[1]//3 page a
+            product(page)//2
+        })
+        function product(page){//1
+            $.ajax({
+                url:"/pagination/paginate-data?page="+page,
+                success:function(res){
+                    $('.table-data').html(res);
+
+                }
+            })
+
+
+        }
+        //pagination part end //////++++++++++++++++++++
 
        
         });

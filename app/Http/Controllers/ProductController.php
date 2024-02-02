@@ -69,6 +69,11 @@ class ProductController extends Controller
 
       ]);
   } //end method
+  public function pagination(Request $request){
+   $products = Product::latest()->paginate(5);
+   return view('pagination_products',compact('products'))->render();
+ } //end method
+
 
  
 
