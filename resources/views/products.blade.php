@@ -25,7 +25,9 @@
             <div class="col-md-2">     </div>
                 <div class="col-md-8">
                     <h2 class="my-5 text-center">Laravel 10 Jquery Ajax Crud</h2>
-                    <a href="" class="btn btn-success my-3"  data-bs-toggle="modal" data-bs-target="#addModal">Add Product</a> <!-- addModal -->
+                    <a href="" class="btn btn-success my-3"  data-bs-toggle="modal" data-bs-target="#addModal">Add Product</a> 
+                    <input type="text" name="search" id="search" class="mb-3 form-control" placeholder="Search Here..">
+                    <!-- addModal -->
                     <div class="table-data">
 
 
