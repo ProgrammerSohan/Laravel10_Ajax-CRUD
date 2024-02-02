@@ -15,7 +15,21 @@
                 e.preventDefault();
                 let name = $('#name').val();
                 let price = $('#price').val();
-                console.log(name+price);
+               // console.log(name+price);
+                $.ajax({
+                    url: "{{ route('add.product') }}",
+                    method: 'POST',
+                    data:{name:name,price:price},
+                    success:function(res){
+
+                    }, error:function(err){
+                        let error = err.responseJSON;
+                        $.each(error.errors,function(index,value){
+                            $('.errMsgContainer').append('<span class="text-danger">'+value+'</span>'+'<br>');
+                        })
+                    }
+                });
+
             });
 
        

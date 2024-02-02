@@ -10,7 +10,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-
+          <div class="errMsgContainer mb-3"></div>
 
             <div class="form-group">
                 <label for="name">Product Name</label>
