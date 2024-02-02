@@ -68,6 +68,7 @@
     </div>
 
     @include('add_product_modal')
+    @include('update_product_modal')
     @include('product_js')
 
   </body>
