@@ -86,7 +86,7 @@
      $(document).on('click','.delete_product', function(e){//+++++++
                 e.preventDefault();
                 let product_id = $(this).data('id');
-                alert(product_id);
+               // alert(product_id);
                 if(confirm('Are you sure to delete product ??')){
 
                         $.ajax({
