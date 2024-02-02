@@ -11,7 +11,7 @@
 
 
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 
     <title>Laravel Ajax Crud</title>
   </head>
@@ -77,6 +77,7 @@
     @include('add_product_modal')
     @include('update_product_modal')
     @include('product_js')
+    {!! Toastr::message() !!}
 
   </body>
 </html>

@@ -1,5 +1,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
 
 
 <script>
@@ -25,6 +26,35 @@
                             $('#addModal').modal('hide');
                             $('#addProductForm')[0].reset();
                             $('.table').load(location.href+' .table');//without reload page–data showing
+
+                                //toastr js code /++++++++++++
+
+
+                                Command: toastr["success"]("Product Added", "Success")
+
+
+                                toastr.options = {
+                                "closeButton": true,
+                                "debug": false,
+                                "newestOnTop": false,
+                                "progressBar": true,
+                                "positionClass": "toast-top-right",
+                                "preventDuplicates": false,
+                                "onclick": null,
+                                "showDuration": "300",
+                                "hideDuration": "1000",
+                                "timeOut": "5000",
+                                "extendedTimeOut": "1000",
+                                "showEasing": "swing",
+                                "hideEasing": "linear",
+                                "showMethod": "fadeIn",
+                                "hideMethod": "fadeOut"
+                                }
+
+
+                                //toastr js code end //++++++
+
+
                         }
                     }, error:function(err){
                         let error = err.responseJSON;
@@ -65,6 +95,35 @@
                             $('#updateModal').modal('hide');
                             $('#updateProductForm')[0].reset();
                             $('.table').load(location.href+' .table');
+
+                            //toastr js code /++++++++++++
+
+
+                            Command: toastr["success"]("Product Updated", "Success")
+
+
+                            toastr.options = {
+                            "closeButton": true,
+                            "debug": false,
+                            "newestOnTop": false,
+                            "progressBar": true,
+                            "positionClass": "toast-top-right",
+                            "preventDuplicates": false,
+                            "onclick": null,
+                            "showDuration": "300",
+                            "hideDuration": "1000",
+                            "timeOut": "5000",
+                            "extendedTimeOut": "1000",
+                            "showEasing": "swing",
+                            "hideEasing": "linear",
+                            "showMethod": "fadeIn",
+                            "hideMethod": "fadeOut"
+                            }
+
+
+                            //toastr js code end //++++++
+
+
                         }
 
                     },error:function(err){
@@ -96,6 +155,35 @@
                             success:function(res){
                                 if(res.status=='success'){
                                     $('.table').load(location.href+' .table');
+
+                                     //toastr js code /++++++++++++
+
+
+                                     Command: toastr["success"]("Product Deleted", "Success")
+
+
+                                        toastr.options = {
+                                        "closeButton": true,
+                                        "debug": false,
+                                        "newestOnTop": false,
+                                        "progressBar": true,
+                                        "positionClass": "toast-top-right",
+                                        "preventDuplicates": false,
+                                        "onclick": null,
+                                        "showDuration": "300",
+                                        "hideDuration": "1000",
+                                        "timeOut": "5000",
+                                        "extendedTimeOut": "1000",
+                                        "showEasing": "swing",
+                                        "hideEasing": "linear",
+                                        "showMethod": "fadeIn",
+                                        "hideMethod": "fadeOut"
+                                        }
+
+
+                                     //toastr js code end //++++++
+
+
                                 }
 
 
